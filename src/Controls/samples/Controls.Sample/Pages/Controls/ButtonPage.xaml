@@ -172,6 +172,16 @@
                 <Label
                     Text="Using Custom Button"
                     Style="{StaticResource Headline}"/>
+                <Entry
+                    x:Name="characterSpacingEntry"
+                    Placeholder="Enter character spacing for button below"
+                    Text="2"/>
+                <Button
+                    Text="Button"
+                    HorizontalOptions="Start"
+                    Background="LightGray"
+                    CharacterSpacing="{Binding Text, Source={Reference characterSpacingEntry}}"/>
+
                 <local:CustomButton
                     Text="Custom Button" />
             </VerticalStackLayout>
